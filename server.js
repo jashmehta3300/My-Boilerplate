@@ -13,6 +13,7 @@ dotenv.config({
 connectDB();
 
 //Route files
+const auth = require('./routes/auth')
 
 const app = express();
 
@@ -27,6 +28,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 //Mount routers
+app.use('/v1/auth', auth)
 
 //access env vars
 const PORT = process.env.PORT || 5000;

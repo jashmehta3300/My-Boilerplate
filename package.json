@@ -1,10 +1,10 @@
 {
   "name": "my-boilerplate",
   "version": "1.0.0",
-  "description": "A boilerplate for my full stack projects using node.js, express.js, mongoDB Atlas  and react.js ",
+  "description": "A boilerplate for my full stack projects using node.js, express.js, mongoDB Atlas  and react.js & redux",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=production node server",
+    "start": "node server",
     "dev": "nodemon server"
   },
   "repository": {
@@ -14,9 +14,9 @@
   "author": "Jash Mehta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jashmehta3300/boiler-plate/issues"
+    "url": "https://github.com/jashmehta3300/My-Boilerplate"
   },
-  "homepage": "https://github.com/jashmehta3300/boiler-plate#readme",
+  "homepage": "https://github.com/jashmehta3300/My-Boilerplate#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
