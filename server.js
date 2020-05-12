@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
+const cookieparser = require('cookie-parser')
 const connectDB = require('./config/db');
 
 //load env vars
@@ -20,11 +21,12 @@ const app = express();
 //Body parser
 app.use(express.json());
 
+// Cookie parser
+app.use(cookieparser())
+
 //Dev middleware Morgan (request logger)
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
-} else {
-  console.log(`${process.env.NODE_ENV} mode running.`);
 }
 
 //Mount routers
