@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 //Mount routers
-app.use('/v1/auth', auth)
+app.use('/api/v1/auth', auth)
 
 //access env vars
 const PORT = process.env.PORT || 5000;
