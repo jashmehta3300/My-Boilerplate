@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const colors = require('colors');
 const cookieparser = require('cookie-parser')
 const connectDB = require('./config/db');
+const errorHandler = require('./middleware/error')
 
 //load env vars
 dotenv.config({
@@ -31,6 +32,7 @@ if (process.env.NODE_ENV === 'development') {
 
 //Mount routers
 app.use('/api/v1/auth', auth)
+app.use(errorHandler);
 
 //access env vars
 const PORT = process.env.PORT || 5000;
