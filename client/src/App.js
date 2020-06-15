@@ -1,13 +1,16 @@
 import React from 'react';
-import './App.css';
-import { Provider } from 'react-redux'
-import store from './store'
+
+import { Provider } from 'react-redux';
+import store from './store';
+
+// import Cookies from 'js-cookie';
 
 function App() {
+  
   return (
     <Provider store={store}>
     <div className="App">
-      Hello World!
+      Hello World
     </div>
     </Provider>
   );
